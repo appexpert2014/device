@@ -72,8 +72,8 @@ Ext.define('Device.view.Geolocation', {
         //Tracking Marker Image
         this.map = this.down('map');
 
-        this.marker = new google.maps.Marker({
-            map: this.map.getMap()
+  //      this.marker = new google.maps.Marker({
+//            map: this.map.getMap()
         });
     },
 
@@ -87,7 +87,7 @@ Ext.define('Device.view.Geolocation', {
             success: function(position) {
                 this.setMasked(false);
                 this.map.setMapCenter(position.coords);
-                this.marker.setPosition(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
+        //        this.marker.setPosition(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
             },
             failure: function() {
                 this.setMasked(false);
@@ -106,7 +106,7 @@ Ext.define('Device.view.Geolocation', {
                 scope: this,
                 callback: function(position) {
                     this.map.setMapCenter(position.coords);
-                    this.marker.setPosition(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
+            //        this.marker.setPosition(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
                 },
                 failure: function() {
                     Ext.device.Notification.show({
