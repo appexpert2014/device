@@ -1,8 +1,3 @@
-//<debug>
-Ext.Loader.setPath({
-    'Ext': '../../src'
-});
-//</debug>
 
 Ext.application({
     name: 'Device',
